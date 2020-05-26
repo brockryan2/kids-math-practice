@@ -65,19 +65,25 @@ def main():
 
   try_again = try_again.lower()
 
-  try_again == 'y':
+  while try_again == 'y':
     multiplicationQuiz()
 
+    print("\nWant to try again?")
+    try_again = input()
+
+    try_again = try_again.lower()
+
   else:
-    print("Come back again soon!")
+    print("Come back again soon!\n")
     time.sleep(1)
     print("Closing program", end="")
-    time.sleep(1)
+    time.sleep(0.5)
+    print(".", end="")
+    time.sleep(0.5)
+    print(".", end="")
+    time.sleep(0.5)
     print(".", end="")
     time.sleep(1)
-    print(".", end="")
-    time.sleep(1)
-    print(".", end="")
     sys.exit(0)
 
 if __name__ == '__main__':
