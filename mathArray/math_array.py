@@ -11,7 +11,7 @@ start_time = datetime.now()
 
 
 def time_function(time_in_seconds):
-  if 3600 > time_in_seconds > 60:
+  if 3600 > time_in_seconds >= 60:
     minutes = time_in_seconds // 60
     seconds = time_in_seconds % 60
 
@@ -20,11 +20,10 @@ def time_function(time_in_seconds):
   elif time_in_seconds < 60:
     return f'0:{time_in_seconds:02}'
 
-  elif 86400 > time_in_seconds > 3600:
-    return " entirely too long!  You should consider getting a life.\n \nSeriously"
+  elif time_in_seconds >= 3600:
+    return " entirely too long!\nYou should consider getting a life.\n \nSeriously"
 
 def createArray():
-  global count
   rows = randint(2,10)
   columns = randint(2, 10)
   total = rows * columns
@@ -130,3 +129,4 @@ def main():
 
 if __name__ == '__main__':
   main()
+
